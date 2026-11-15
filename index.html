@@ -7,415 +7,67 @@
   <meta name="description" content="Abduqodirjon va Durdonaoyning nikoh to‘y taklifnomasi">
   <title>Abduqodirjon &amp; Durdonaoy — Taklifnoma</title>
   <style>
-    :root{
-      --bg-1:#fffdf9;
-      --bg-2:#f9efe1;
-      --ink:#46382c;
-      --gold:#a9803e;
-      --gold-deep:#8c6830;
-      --gold-light:#e7d7b0;
-      --rose:#d9a7a4;
-      --rose-deep:#b87b7e;
-      --muted:#786b5d;
-      --card:#fffaf3;
-      --line:#e8dcc2;
-      --shadow:rgba(107,82,55,.12);
-    }
-
+    :root{--bg-1:#fffdf9;--bg-2:#f9efe1;--ink:#46382c;--gold:#a9803e;--gold-deep:#8c6830;--gold-light:#e7d7b0;--rose:#d9a7a4;--rose-deep:#b87b7e;--muted:#786b5d;--card:#fffaf3;--line:#e8dcc2;--shadow:rgba(107,82,55,.12)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      min-height:100vh;
-      color:var(--ink);
-      font-family:Georgia,'Times New Roman',serif;
-      background:radial-gradient(circle at top, #ffffff 0%, var(--bg-1) 28%, var(--bg-2) 100%);
-    }
-
-    .shell{
-      min-height:100vh;
-      display:grid;
-      place-items:center;
-      padding:20px 14px 42px;
-      position:relative;
-      overflow-x:hidden;
-    }
-
-    .shell:before,
-    .shell:after{
-      content:'❀';
-      position:absolute;
-      color:#d4b57a;
-      opacity:.22;
-      font-size:clamp(150px,34vw,340px);
-      line-height:1;
-      pointer-events:none;
-      filter:blur(.2px);
-    }
-
-    .shell:before{top:-72px;left:-82px;transform:rotate(-25deg)}
-    .shell:after{bottom:-88px;right:-78px;transform:rotate(25deg)}
-
-    .card{
-      width:min(100%, 590px);
-      position:relative;
-      z-index:1;
-      text-align:center;
-      padding:22px clamp(20px,5vw,46px) 30px;
-      background:linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,250,243,.9));
-      border:1px solid var(--line);
-      border-radius:30px;
-      box-shadow:0 18px 42px var(--shadow);
-      backdrop-filter:blur(2px);
-    }
-
-    .flower{
-      font-size:64px;
-      line-height:1;
-      margin:0 auto 12px;
-      color:var(--rose-deep);
-      text-shadow:0 8px 18px rgba(184,123,126,.28);
-      animation:float 3s ease-in-out infinite;
-    }
-
-    .bismillah{
-      font-size:18px;
-      color:var(--gold);
-      font-style:italic;
-      margin:0 0 16px;
-      letter-spacing:.03em;
-    }
-
-    .intro{
-      font-size:15px;
-      line-height:1.8;
-      color:var(--muted);
-      max-width:430px;
-      margin:0 auto 14px;
-    }
-
-    h1{
-      font-size:clamp(31px,8vw,52px);
-      font-weight:400;
-      line-height:1.08;
-      margin:12px 0;
-      color:var(--ink);
-      letter-spacing:.02em;
-    }
-
-    h1 span{
-      display:block;
-      color:var(--gold);
-      font-style:italic;
-      font-size:.7em;
-      margin:4px;
-    }
-
-    .ring{
-      width:60px;
-      height:60px;
-      margin:12px auto;
-      position:relative;
-      border-radius:50%;
-      background:radial-gradient(circle at center, rgba(255,255,255,.7) 0 36%, transparent 37%);
-    }
-
-    .ring:before,
-    .ring:after{
-      content:'';
-      position:absolute;
-      border:2px solid var(--gold);
-      border-radius:50%;
-      width:30px;
-      height:40px;
-      top:8px;
-      background:rgba(255,255,255,.12);
-    }
-
-    .ring:before{left:5px;transform:rotate(-22deg)}
-    .ring:after{right:5px;transform:rotate(22deg)}
-
-    .rule{
-      height:1px;
-      background:linear-gradient(90deg, transparent, var(--gold-light), transparent);
-      margin:18px auto;
-      max-width:260px;
-    }
-
-    .date{
-      font-size:22px;
-      color:var(--gold);
-      margin:8px 0;
-      letter-spacing:.04em;
-    }
-
-    .venue{
-      font-size:18px;
-      line-height:1.6;
-      color:var(--muted);
-      margin:0 0 12px;
-    }
-
-    .closing{
-      font-size:16px;
-      color:var(--ink);
-      margin:0;
-    }
-
-    .dance{
-      margin:26px auto 0;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-    }
-
-    .dance h2{
-      color:var(--rose-deep);
-      font-size:22px;
-      font-weight:400;
-      margin:0;
-    }
-
-    .dance p{
-      color:var(--muted);
-      margin:6px 0;
-    }
-
-    .stage{
-      height:150px;
-      max-width:350px;
-      margin:8px auto 12px;
-      position:relative;
-      overflow:hidden;
-      border-bottom:3px solid #d6b98a;
-      border-radius:50% 50% 0 0/18% 18% 0 0;
-      background:radial-gradient(ellipse at center, #f9f1e5 0%, #f0e2c4 60%, #e4c998 100%);
-      box-shadow:inset 0 -8px 10px rgba(174,137,95,.08);
-    }
-
-    .couple{
-      position:absolute;
-      left:50%;
-      bottom:0;
-      width:150px;
-      height:136px;
-      transform:translateX(-50%);
-    }
-
-    .person{
-      position:absolute;
-      bottom:2px;
-      width:58px;
-      height:112px;
-      transform-origin:50% 35%;
-      animation:dance-sway 1.15s ease-in-out infinite alternate;
-    }
-
-    .groom{left:22px;animation-delay:-.55s}
-    .bride{right:20px;animation-delay:-.1s}
-
-    .head{
-      position:absolute;
-      z-index:2;
-      top:0;
-      left:17px;
-      width:26px;
-      height:29px;
-      border-radius:50%;
-      background:#efc6a9;
-      border:2px solid #fff8f1;
-    }
-
-    .bride .head:before{
-      content:'';
-      position:absolute;
-      z-index:1;
-      top:-2px;
-      left:-4px;
-      width:34px;
-      height:20px;
-      border-radius:50% 50% 42% 42%;
-      background:#f1d1d7;
-    }
-
-    .groom .head{background:#d5b49d}
-
-    .torso{
-      position:absolute;
-      top:27px;
-      left:7px;
-      width:46px;
-      height:49px;
-      border-radius:13px 13px 8px 8px;
-      background:#f5dfe7;
-      animation:body-bob .55s ease-in-out infinite alternate;
-    }
-
-    .groom .torso{
-      background:#72849a;
-      animation-delay:-.25s;
-    }
-
-    .bride .torso:after{
-      content:'';
-      position:absolute;
-      right:6px;
-      top:4px;
-      width:12px;
-      height:12px;
-      border-radius:50%;
-      background:#efc6a9;
-    }
-
-    .arm{
-      position:absolute;
-      z-index:3;
-      top:37px;
-      width:42px;
-      height:7px;
-      border-radius:9px;
-      background:#efc6a9;
-      transform-origin:8px 50%;
-    }
-
-    .bride .arm{right:-16px;animation:bride-arm .65s ease-in-out infinite alternate}
-    .groom .arm{left:-15px;transform-origin:34px 50%;animation:groom-arm .65s ease-in-out infinite alternate}
-
-    .leg{
-      position:absolute;
-      bottom:-10px;
-      left:18px;
-      width:11px;
-      height:32px;
-      border-radius:10px;
-      background:#4f504d;
-      transform-origin:50% 0;
-      animation:step .38s ease-in-out infinite alternate;
-    }
-
-    .leg.two{left:32px;animation-delay:-.38s}
-    .groom .leg{background:#49576a}
-    .bride .leg{background:#6d4d45}
-    .bride .leg{animation-duration:.46s}
-    .bride .leg.two{animation-delay:-.46s}
-
-    .music-title{
-      font-weight:bold;
-      color:var(--ink);
-      margin:12px 0 8px!important;
-    }
-
-    .music-frame{
-      display:block;
-      width:100%;
-      max-width:400px;
-      height:225px;
-      margin:0 auto;
-      border:0;
-      border-radius:12px;
-      background:#f8f4ef;
-    }
-
-    .music-link{
-      display:inline-block;
-      margin-top:10px;
-      color:var(--gold-deep);
-      text-decoration:none;
-      transition:.2s ease;
-    }
-
-    .music-link:hover{text-decoration:underline;opacity:.9}
-
-    @keyframes dance-sway{
-      0%{transform:rotate(-9deg) translateY(0)}
-      100%{transform:rotate(10deg) translateY(-5px)}
-    }
-
-    @keyframes body-bob{
-      from{transform:translateY(0)}
-      to{transform:translateY(-3px)}
-    }
-
-    @keyframes bride-arm{
-      from{transform:rotate(-30deg)}
-      to{transform:rotate(-65deg)}
-    }
-
-    @keyframes groom-arm{
-      from{transform:rotate(21deg)}
-      to{transform:rotate(48deg)}
-    }
-
-    @keyframes step{
-      from{transform:rotate(-15deg)}
-      to{transform:rotate(18deg)}
-    }
-
-    @keyframes float{
-      50%{transform:translateY(-5px)}
-    }
-
-    @media(max-width:380px){
-      .card{padding-left:17px;padding-right:17px}
-      .music-frame{height:205px}
-    }
-
-    @media(prefers-reduced-motion:reduce){
-      *,*::before,*::after{
-        animation-duration:.01ms!important;
-        animation-iteration-count:1!important;
-        scroll-behavior:auto!important;
-      }
-    }
+    body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at top,#fff 0%,var(--bg-1) 28%,var(--bg-2) 100%)}
+    .shell{min-height:100vh;display:grid;place-items:center;padding:20px 14px 42px;position:relative;overflow-x:hidden}
+    .shell:before,.shell:after{content:'❀';position:absolute;color:#d4b57a;opacity:.22;font-size:clamp(150px,34vw,340px);line-height:1;pointer-events:none;filter:blur(.2px)}
+    .shell:before{top:-72px;left:-82px;transform:rotate(-25deg)}.shell:after{bottom:-88px;right:-78px;transform:rotate(25deg)}
+    .card{width:min(100%,590px);position:relative;z-index:1;text-align:center;padding:22px clamp(20px,5vw,46px) 30px;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,250,243,.9));border:1px solid var(--line);border-radius:30px;box-shadow:0 18px 42px var(--shadow);backdrop-filter:blur(2px)}
+    .flower{font-size:64px;line-height:1;margin:0 auto 12px;color:var(--rose-deep);text-shadow:0 8px 18px rgba(184,123,126,.28);animation:float 3s ease-in-out infinite}
+    .bismillah{font-size:18px;color:var(--gold);font-style:italic;margin:0 0 16px;letter-spacing:.03em}
+    .intro{font-size:15px;line-height:1.8;color:var(--muted);max-width:430px;margin:0 auto 14px}
+    h1{font-size:clamp(31px,8vw,52px);font-weight:400;line-height:1.08;margin:12px 0;color:var(--ink);letter-spacing:.02em}h1 span{display:block;color:var(--gold);font-style:italic;font-size:.7em;margin:4px}
+    .ring{width:60px;height:60px;margin:12px auto;position:relative;border-radius:50%;background:radial-gradient(circle at center,rgba(255,255,255,.7) 0 36%,transparent 37%)}
+    .ring:before,.ring:after{content:'';position:absolute;border:2px solid var(--gold);border-radius:50%;width:30px;height:40px;top:8px;background:rgba(255,255,255,.12)}.ring:before{left:5px;transform:rotate(-22deg)}.ring:after{right:5px;transform:rotate(22deg)}
+    .rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold-light),transparent);margin:18px auto;max-width:260px}
+    .date{font-size:22px;color:var(--gold);margin:8px 0;letter-spacing:.04em}.venue{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 12px}.closing{font-size:16px;color:var(--ink);margin:0}
+    .dance{margin:26px auto 0;padding-top:18px;border-top:1px solid var(--line)}.dance h2{color:var(--rose-deep);font-size:22px;font-weight:400;margin:0}.dance p{color:var(--muted);margin:6px 0}
+    .stage{height:150px;max-width:350px;margin:8px auto 12px;position:relative;overflow:hidden;border-bottom:3px solid #d6b98a;border-radius:50% 50% 0 0/18% 18% 0 0;background:radial-gradient(ellipse at center,#f9f1e5 0%,#f0e2c4 60%,#e4c998 100%);box-shadow:inset 0 -8px 10px rgba(174,137,95,.08)}
+    .couple{position:absolute;left:50%;bottom:0;width:150px;height:136px;transform:translateX(-50%)}
+    .person{position:absolute;bottom:2px;width:58px;height:112px;transform-origin:50% 42%;animation:dance-sway .9s ease-in-out infinite alternate;will-change:transform}
+    .groom{left:22px;animation-delay:-.45s}.bride{right:20px;animation-delay:0s}
+    .head{position:absolute;z-index:2;top:0;left:17px;width:26px;height:29px;border-radius:50%;background:#efc6a9;border:2px solid #fff8f1;animation:head-bob .45s ease-in-out infinite alternate}
+    .bride .head:before{content:'';position:absolute;z-index:1;top:-2px;left:-4px;width:34px;height:20px;border-radius:50% 50% 42% 42%;background:#f1d1d7}.groom .head{background:#d5b49d}
+    .torso{position:absolute;top:27px;left:7px;width:46px;height:49px;border-radius:13px 13px 8px 8px;background:#f5dfe7;animation:body-bob .38s ease-in-out infinite alternate}.groom .torso{background:#72849a;animation-delay:-.19s}
+    .bride .torso:after{content:'';position:absolute;right:6px;top:4px;width:12px;height:12px;border-radius:50%;background:#efc6a9}
+    .arm{position:absolute;z-index:3;top:37px;width:42px;height:7px;border-radius:9px;background:#efc6a9;transform-origin:8px 50%}
+    .bride .arm{right:-16px;animation:bride-arm .55s ease-in-out infinite alternate}.groom .arm{left:-15px;transform-origin:34px 50%;animation:groom-arm .55s ease-in-out infinite alternate}
+    .leg{position:absolute;bottom:0;left:18px;width:11px;height:32px;border-radius:10px;background:#4f504d;transform-origin:50% 0;animation:step .32s ease-in-out infinite alternate}
+    .leg.two{left:32px;animation-delay:-.32s}.groom .leg{background:#49576a}.bride .leg{background:#6d4d45;animation-duration:.4s}.bride .leg.two{animation-delay:-.4s}
+    .music-title{font-weight:bold;color:var(--ink);margin:12px 0 8px!important}.music-frame{display:block;width:100%;max-width:400px;height:225px;margin:0 auto;border:0;border-radius:12px;background:#f8f4ef}
+    .music-link{display:inline-block;margin-top:10px;color:var(--gold-deep);text-decoration:none;transition:.2s ease}.music-link:hover{text-decoration:underline;opacity:.9}
+    @keyframes dance-sway{0%{transform:translate(-5px,0) rotate(-17deg)}35%{transform:translate(3px,-6px) rotate(5deg)}70%{transform:translate(6px,0) rotate(16deg)}100%{transform:translate(-2px,-7px) rotate(-5deg)}}
+    @keyframes body-bob{from{transform:translateY(1px) rotate(-3deg)}to{transform:translateY(-5px) rotate(4deg)}}
+    @keyframes head-bob{from{transform:rotate(-8deg) translateY(0)}to{transform:rotate(8deg) translateY(-2px)}}
+    @keyframes bride-arm{from{transform:rotate(-24deg)}to{transform:rotate(-78deg)}}
+    @keyframes groom-arm{from{transform:rotate(15deg)}to{transform:rotate(58deg)}}
+    @keyframes step{from{transform:rotate(-25deg) translateY(0)}to{transform:rotate(28deg) translateY(-4px)}}
+    @keyframes float{50%{transform:translateY(-5px)}}
+    @media(max-width:380px){.card{padding-left:17px;padding-right:17px}.music-frame{height:205px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
-  <main class="shell">
-    <article class="card">
-      <div class="flower" aria-hidden="true">✿</div>
-      <p class="bismillah">Bismillahir Rohmanir Rohiym.</p>
-      <p class="intro">Sizni farzandlarimizning nikoh to‘ylar munosabati bilan quvonchli oqshomimizga taklif etamiz.</p>
-      <h1>Abduqodirjon <span>&amp;</span> Durdonaoy</h1>
-      <div class="ring" aria-hidden="true"></div>
-      <div class="rule"></div>
-      <p class="date">5-dekabr, 2026-yil</p>
-      <p class="venue">Shahrisabz shahri<br><strong>Baxtli Oila tuyxonasi</strong></p>
-      <p class="closing">Tashrifingiz biz uchun katta sharaf!</p>
-
-      <section class="dance" aria-label="Kelin-kuyov valsi va to‘y qo‘shig‘i">
-        <h2>Kelin-kuyov valsi</h2>
-        <p>Baxtli kuningiz muborak bo‘lsin!</p>
-
-        <div class="stage" aria-hidden="true">
-          <div class="couple">
-            <div class="person bride">
-              <i class="head"></i>
-              <i class="torso"></i>
-              <i class="arm"></i>
-              <i class="leg"></i>
-              <i class="leg two"></i>
-            </div>
-            <div class="person groom">
-              <i class="head"></i>
-              <i class="torso"></i>
-              <i class="arm"></i>
-              <i class="leg"></i>
-              <i class="leg two"></i>
-            </div>
-          </div>
-        </div>
-
-        <p class="music-title">Bojalar — “To‘ylar muborak”</p>
-        <iframe
-          class="music-frame"
-          src="https://www.youtube.com/embed/6z27RS6xJF4"
-          title="Bojalar — To‘ylar muborak"
-          loading="eager"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-        <a class="music-link" href="https://www.youtube.com/watch?v=6z27RS6xJF4" target="_blank" rel="noopener noreferrer">YouTube’da qo‘shiqni ochish</a>
-      </section>
-    </article>
-  </main>
+  <main class="shell"><article class="card">
+    <div class="flower" aria-hidden="true">✿</div>
+    <p class="bismillah">Bismillahir Rohmanir Rohiym.</p>
+    <p class="intro">Sizni farzandlarimizning nikoh to‘ylar munosabati bilan quvonchli oqshomimizga taklif etamiz.</p>
+    <h1>Abduqodirjon <span>&amp;</span> Durdonaoy</h1>
+    <div class="ring" aria-hidden="true"></div><div class="rule"></div>
+    <p class="date">5-dekabr, 2026-yil</p>
+    <p class="venue">Shahrisabz shahri<br><strong>Baxtli Oila tuyxonasi</strong></p>
+    <p class="closing">Tashrifingiz biz uchun katta sharaf!</p>
+    <section class="dance" aria-label="Kelin-kuyov valsi va to‘y qo‘shig‘i">
+      <h2>Kelin-kuyov valsi</h2><p>Baxtli kuningiz muborak bo‘lsin!</p>
+      <div class="stage" aria-hidden="true"><div class="couple">
+        <div class="person bride"><i class="head"></i><i class="torso"></i><i class="arm"></i><i class="leg"></i><i class="leg two"></i></div>
+        <div class="person groom"><i class="head"></i><i class="torso"></i><i class="arm"></i><i class="leg"></i><i class="leg two"></i></div>
+      </div></div>
+      <p class="music-title">Bojalar — “To‘ylar muborak”</p>
+      <iframe class="music-frame" src="https://www.youtube.com/embed/6z27RS6xJF4" title="Bojalar — To‘ylar muborak" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <a class="music-link" href="https://www.youtube.com/watch?v=6z27RS6xJF4" target="_blank" rel="noopener noreferrer">YouTube’da qo‘shiqni ochish</a>
+    </section>
+  </article></main>
 </body>
 </html>
