@@ -4,29 +4,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fffaf4">
-  <meta name="description" content="Abduqodirjon va Durdonaoyning nikoh to‘yi taklifnomasi">
+  <meta name="description" content="Abduqodirjon va Durdonaoyning nikoh to‘y taklifnomasi">
   <title>Abduqodirjon &amp; Durdonaoy — Taklifnoma</title>
   <style>
-    :root{--ink:#46382c;--gold:#a9803e;--gold-light:#e4d2a8;--muted:#786b5d;--rose:#ead6d0}
+    :root{--ivory:#fffaf4;--paper:#fffdfb;--gold:#b88a42;--gold-dark:#8a6734;--gold-light:#ead8a9;--rose:#c79292;--rose-dark:#a86569;--ink:#48382d;--muted:#76685d;--line:#ebdcc1;--shadow:rgba(82,58,38,.12)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}
-    body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 50% 20%,#fff 0,#fffaf2 52%,#f3eadc 100%)}
-    .shell{min-height:100vh;display:grid;place-items:center;padding:20px 14px;overflow:hidden;position:relative}
-    .shell:before,.shell:after{content:'❀';position:absolute;color:#c5a36d;opacity:.2;font-size:clamp(150px,34vw,340px);line-height:1;pointer-events:none}
-    .shell:before{top:-75px;left:-88px;transform:rotate(-25deg)}.shell:after{bottom:-100px;right:-84px;transform:rotate(25deg)}
-    .card{width:min(100%,560px);position:relative;z-index:1;text-align:center;padding:22px clamp(20px,6vw,48px) 28px;background:rgba(255,255,255,.88);border:1px solid #d8c49b;border-radius:26px;box-shadow:0 20px 60px #806b4430}
-    .flower{font-size:58px;line-height:1;margin:0 auto 15px;color:#bf8b9b;text-shadow:0 5px 16px #bf8b9b55;animation:float 3s ease-in-out infinite}
-    .bismillah{font-size:18px;color:var(--gold);font-style:italic;margin:0 0 16px;position:relative;z-index:1}.intro{font-size:15px;line-height:1.75;color:var(--muted);max-width:420px;margin:0 auto 14px}
-    h1{font-size:clamp(32px,8vw,52px);font-weight:400;line-height:1.08;margin:12px 0;color:var(--ink)}h1 span{display:block;color:var(--gold);font-style:italic;font-size:.7em;margin:4px}
-    .ring{width:55px;height:55px;margin:12px auto;position:relative}.ring:before,.ring:after{content:'';position:absolute;border:2px solid var(--gold);border-radius:50%;width:30px;height:40px;top:7px;left:4px;transform:rotate(-38deg)}.ring:after{left:21px;transform:rotate(38deg);border-color:#d6b7a9}
-    .rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold-light),transparent);margin:16px auto;max-width:250px}.date{font-size:22px;color:var(--gold);margin:8px 0}.venue{font-size:17px;line-height:1.6;margin:0}.closing{font-size:16px;font-style:italic;color:var(--muted);margin:16px 0}
-    .dance{margin:24px auto 0;padding-top:18px;border-top:1px solid #e8dcc2}.dance h2{color:#b57f8f;font-size:22px;font-weight:400;margin:0}.dance p{color:var(--muted);margin:6px 0}
-    .stage{height:150px;max-width:350px;margin:8px auto 12px;position:relative;overflow:hidden;border-bottom:3px solid #d6b98a;border-radius:50% 50% 0 0/18% 18% 0 0;background:radial-gradient(ellipse at bottom,#ead6d055,transparent 70%)}
-    .couple{position:absolute;left:50%;bottom:0;width:150px;height:136px;transform:translateX(-50%)}.person{position:absolute;bottom:2px;width:58px;height:112px;transform-origin:50% 35%;animation:sway 1.7s ease-in-out infinite alternate}.bride{left:12px}.groom{right:12px;animation-delay:-.85s}
-    .head{position:absolute;z-index:2;top:0;left:17px;width:26px;height:29px;border-radius:50%;background:#efc6a9;border:2px solid #fff8f1}.bride .head:before{content:'';position:absolute;z-index:-1;left:-5px;top:-5px;width:34px;height:34px;border-radius:50%;background:#493630}.groom .head:after{content:'';position:absolute;left:3px;top:-5px;width:17px;height:8px;border-radius:9px 9px 2px 2px;background:#493630}
-    .torso{position:absolute;top:27px;left:7px;width:46px;height:49px;border-radius:13px 13px 8px 8px;background:#f5dfe7}.groom .torso{background:#72849a}.bride .torso:after{content:'';position:absolute;top:25px;left:-13px;width:72px;height:64px;background:linear-gradient(145deg,#fff9f5,#e8cfd5);clip-path:polygon(25% 0,75% 0,100% 100%,0 100%)}
-    .arm{position:absolute;z-index:3;top:37px;width:42px;height:7px;border-radius:9px;background:#efc6a9}.bride .arm{right:-16px;transform:rotate(-30deg)}.groom .arm{left:-15px;transform:rotate(210deg)}.leg{position:absolute;top:103px;left:24px;width:7px;height:25px;border-radius:8px;background:#9a6f61;transform-origin:top;animation:step .6s ease-in-out infinite alternate}.leg.two{left:35px;animation-delay:-.6s}.groom .leg{background:#39475a}
-    .music-title{font-weight:bold;color:var(--ink);margin:12px 0 8px!important}.music-frame{display:block;width:100%;max-width:400px;height:225px;margin:0 auto;border:0;border-radius:12px;background:#eee5df}.music-link{display:inline-block;margin:10px auto 0;color:#86632e;font-size:15px}
-    @keyframes sway{to{transform:rotate(9deg) translateY(-3px)}}@keyframes step{to{transform:rotate(18deg)}}@keyframes float{50%{transform:translateY(-5px)}}
+    body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at 50% 10%,#fff 0%,#fffaf4 30%,#f4eadb 100%)}
+    .shell{min-height:100vh;display:grid;place-items:center;padding:22px 14px 40px;position:relative;overflow-x:clip}
+    .shell:before,.shell:after{content:'❀';position:absolute;color:rgba(184,138,66,.18);font-size:clamp(150px,34vw,360px);line-height:1;pointer-events:none}
+    .shell:before{top:-70px;left:-85px;transform:rotate(-24deg)}.shell:after{bottom:-100px;right:-85px;transform:rotate(22deg)}
+    .card{width:min(100%,600px);position:relative;z-index:1;text-align:center;padding:24px clamp(22px,5vw,48px) 32px;background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,249,243,.94));border:1px solid rgba(184,138,66,.38);border-radius:30px;box-shadow:0 25px 55px var(--shadow),inset 0 1px 0 rgba(255,255,255,.75);backdrop-filter:blur(2px)}
+    .flower{font-size:60px;line-height:1;margin:0 auto 12px;color:var(--rose-dark);text-shadow:0 10px 18px rgba(168,101,105,.25);animation:float 3.2s ease-in-out infinite}
+    .bismillah{font-size:18px;color:var(--gold-dark);font-style:italic;margin:0 0 18px;letter-spacing:.05em}
+    .intro{font-size:15px;line-height:1.8;color:var(--muted);max-width:430px;margin:0 auto 16px}
+    h1{font-size:clamp(30px,7.4vw,52px);font-weight:400;line-height:1.08;margin:10px 0 8px;color:var(--ink);letter-spacing:.02em}h1 span{display:block;color:var(--gold);font-style:italic;font-size:.7em;margin:4px 0}
+    .ring{width:62px;height:62px;margin:12px auto 10px;position:relative}.ring:before,.ring:after{content:'';position:absolute;border:2px solid var(--gold);border-radius:50%;width:30px;height:40px;top:10px;background:rgba(255,255,255,.08)}.ring:before{left:2px;transform:rotate(-22deg)}.ring:after{right:2px;transform:rotate(22deg)}
+    .rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold-light),transparent);margin:18px auto;max-width:270px}
+    .date{font-size:22px;color:var(--gold-dark);margin:6px 0 8px;letter-spacing:.04em}.venue{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 10px}.closing{font-size:16px;color:var(--ink);margin:0}
+    .dance{margin:28px auto 0;padding-top:18px;border-top:1px solid var(--line)}.dance h2{color:var(--rose-dark);font-size:22px;font-weight:400;margin:0}.dance p{color:var(--muted);margin:6px 0}
+    .stage{height:170px;max-width:360px;margin:10px auto 12px;position:relative;overflow:hidden;border-bottom:3px solid #d6b98a;border-radius:52% 52% 0 0/20% 20% 0 0;background:radial-gradient(ellipse at center,#faf3e6 0%,#f2e0b9 56%,#e8d09f 100%);box-shadow:inset 0 -7px 10px rgba(169,125,72,.08)}
+    .couple{position:absolute;left:50%;bottom:0;width:182px;height:152px;transform:translateX(-50%)}
+    .person{position:absolute;bottom:2px;width:78px;height:142px;transform-origin:50% 38%;animation:dance-sway 2s ease-in-out infinite;will-change:transform}
+    .groom{left:22px;animation-delay:-1s}.bride{right:22px;animation-delay:-.2s}
+    .head{position:absolute;z-index:4;top:2px;left:25px;width:30px;height:32px;border-radius:50% 50% 46% 46%;background:radial-gradient(ellipse at 35% 32%,#f9dcc2 0 18%,#e8b99d 72%,#cc9b80 100%);box-shadow:0 2px 3px rgba(110,78,62,.18)}
+    .head:after{content:'';position:absolute;left:9px;top:15px;width:3px;height:2px;border-radius:50%;background:#5a413c;box-shadow:9px 0 #5a413c,4px 7px 0 -1px #b67c73}
+    .bride .head:before{content:'';position:absolute;z-index:2;top:-5px;left:-3px;width:36px;height:28px;border-radius:55% 55% 42% 42%;background:radial-gradient(ellipse at 45% 28%,#4f342f 0 45%,#2d2424 78%);box-shadow:inset 0 -3px #704d47}
+    .groom .head:before{content:'';position:absolute;z-index:2;top:-4px;left:0;width:30px;height:15px;border-radius:70% 70% 25% 25%;background:linear-gradient(#3a2f2d,#58463f)}
+    .neck{position:absolute;z-index:1;top:31px;left:33px;width:12px;height:12px;background:linear-gradient(90deg,#d49f83,#efc4a6 55%,#c88f73);border-radius:3px}
+    .torso{position:absolute;z-index:2;top:35px;left:14px;width:52px;height:58px;border-radius:16px 16px 8px 8px;animation:body-bob .55s ease-in-out infinite alternate}
+    .bride .torso{background:linear-gradient(100deg,#f2dfe4,#fff1f5 38%,#e6b9c3);box-shadow:inset -5px 0 7px rgba(185,125,141,.18),0 3px 4px rgba(117,86,74,.1);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+    .bride .torso:before{content:'';position:absolute;left:0;right:0;bottom:0;height:22px;background:repeating-linear-gradient(90deg,transparent 0 8px,rgba(255,255,255,.45) 9px 10px)}
+    .groom .torso{background:linear-gradient(90deg,#2e3a46,#536779 45%,#324153);border-radius:12px 12px 6px 6px;animation-delay:-.27s}
+    .groom .torso:before{content:'';position:absolute;left:15px;top:0;width:20px;height:28px;background:linear-gradient(135deg,#f6eee5 0 45%,transparent 47%),linear-gradient(225deg,#f6eee5 0 45%,transparent 47%);clip-path:polygon(0 0,100% 0,50% 100%)}
+    .groom .torso:after{content:'';position:absolute;left:22px;top:4px;width:8px;height:30px;background:#a74d54;clip-path:polygon(0 0,100% 0,70% 100%,50% 80%,30% 100%)}
+    .arm{position:absolute;z-index:3;top:48px;width:38px;height:9px;border-radius:8px;background:linear-gradient(180deg,#f1c8aa,#dca889);box-shadow:0 1px 2px rgba(121,85,66,.18)}
+    .bride .arm{right:-2px;transform:rotate(28deg);transform-origin:7px 50%;animation:bride-arm .75s ease-in-out infinite alternate}
+    .groom .arm{left:1px;transform:rotate(-36deg);transform-origin:32px 50%;animation:groom-arm .75s ease-in-out infinite alternate}
+    .hand{position:absolute;z-index:5;top:57px;width:10px;height:11px;border-radius:50%;background:linear-gradient(130deg,#f4c9a9,#dba486);box-shadow:0 1px 2px rgba(121,85,66,.18)}.bride .hand{left:5px}.groom .hand{right:4px}
+    .leg{position:absolute;z-index:1;top:86px;left:27px;width:12px;height:46px;border-radius:8px;background:linear-gradient(90deg,#f5e8df,#fff9f3 52%,#decbc0);transform-origin:50% 0;animation:step .8s ease-in-out infinite alternate}
+    .leg.two{left:42px;animation-delay:-.4s}.groom .leg{top:88px;height:43px;background:linear-gradient(90deg,#25303b,#3e4c5a 55%,#202a34);border-radius:4px 4px 7px 7px}
+    .shoe{position:absolute;z-index:2;bottom:0;left:23px;width:18px;height:7px;border-radius:60% 35% 20% 20%;background:#786253}.groom .shoe{background:#24272a}.leg.two~.shoe{left:38px}
+    .music-title{font-weight:bold;color:var(--ink);margin:12px 0 8px!important}.music-frame{display:block;width:100%;max-width:410px;height:230px;margin:0 auto;border:0;border-radius:12px;background:#f8f4ef}
+    .music-link{display:inline-block;margin-top:10px;color:var(--gold-dark);text-decoration:none}.music-link:hover{text-decoration:underline}
+    @keyframes dance-sway{0%,100%{transform:translateY(0) rotate(-4deg)}25%{transform:translateY(-5px) rotate(7deg)}50%{transform:translateY(-2px) rotate(10deg)}75%{transform:translateY(-4px) rotate(-3deg)}}
+    @keyframes body-bob{from{transform:translateY(1px) rotate(-3deg)}to{transform:translateY(-4px) rotate(3deg)}}
+    @keyframes bride-arm{from{transform:rotate(-18deg)}to{transform:rotate(-58deg)}}
+    @keyframes groom-arm{from{transform:rotate(18deg)}to{transform:rotate(56deg)}}
+    @keyframes step{from{transform:rotate(-12deg) translateY(0)}to{transform:rotate(16deg) translateY(-3px)}}
+    @keyframes float{50%{transform:translateY(-5px)}}
     @media(max-width:380px){.card{padding-left:17px;padding-right:17px}.music-frame{height:205px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
   </style>
@@ -44,11 +69,11 @@
     <section class="dance" aria-label="Kelin-kuyov valsi va to‘y qo‘shig‘i">
       <h2>Kelin-kuyov valsi</h2><p>Baxtli kuningiz muborak bo‘lsin!</p>
       <div class="stage" aria-hidden="true"><div class="couple">
-        <div class="person bride"><i class="head"></i><i class="torso"></i><i class="arm"></i><i class="leg"></i><i class="leg two"></i></div>
-        <div class="person groom"><i class="head"></i><i class="torso"></i><i class="arm"></i><i class="leg"></i><i class="leg two"></i></div>
+        <div class="person bride"><i class="head"></i><i class="neck"></i><i class="torso"></i><i class="arm"></i><i class="hand"></i><i class="leg"></i><i class="leg two"></i><i class="shoe"></i></div>
+        <div class="person groom"><i class="head"></i><i class="neck"></i><i class="torso"></i><i class="arm"></i><i class="hand"></i><i class="leg"></i><i class="leg two"></i><i class="shoe"></i></div>
       </div></div>
       <p class="music-title">Bojalar — “To‘ylar muborak”</p>
-      <iframe class="music-frame" src="https://www.youtube.com/embed/6z27RS6xJF4" title="Bojalar — To‘ylar muborak" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe class="music-frame" src="https://www.youtube.com/embed/6z27RS6xJF4" title="Bojalar — To‘ylar muborak" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <a class="music-link" href="https://www.youtube.com/watch?v=6z27RS6xJF4" target="_blank" rel="noopener noreferrer">YouTube’da qo‘shiqni ochish</a>
     </section>
   </article></main>
